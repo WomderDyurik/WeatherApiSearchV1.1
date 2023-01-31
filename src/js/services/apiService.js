@@ -10,9 +10,11 @@ class Api{
 	async searchGeoLocation(cityName){
 		try {
 			const response = await axios.get(`${this.url}/geo/1.0/direct?q=${cityName}&limit=3&appid=${this.key}`)
+			if(!response.data.length) {
+				alert('Введите другое название!')
+			}
 			return response.data
 		} catch (err) {
-			console.log(err)
 			return Promise.reject(err)
 		}
 	}
