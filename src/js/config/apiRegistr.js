@@ -1,5 +1,5 @@
 const configReg = {
-	apiUrl: 'https://reqres.in',
-}
+  apiUrl: 'https://reqres.in',
+};
 
 export default configReg;
